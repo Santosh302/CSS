@@ -1,0 +1,63 @@
+@media(max-width:600px)
+{
+    /* 
+    very small mobile phone, iphone so or smaller
+    */
+    body{
+        background-color:red;
+    }
+    div::after{
+        content:'small Phone';
+    }
+}
+@media(min-width:600px)/*600px-768px */
+{ 
+    /* 
+    latest mobile like iphone 14,14pro samsung device etc
+    
+    */
+    body{
+        background-color:aquamarine;
+    }
+    div::after{
+         content:'Latestet big Phone'
+    }
+}
+@media(min-width:768px)/* 768px-760px */
+{
+ /*
+ tablets in landscpe
+ */
+ body{
+    background-color:blue;
+ }
+ div::after{
+    content:' tablets'
+ }
+}
+@media(min-width:992px)/*992px-1200px*/
+{
+    /* 
+       laptop and bigger tables  
+     */
+     body{
+        background-color: yellowgreen;
+     }
+     div::after{
+        content:'Laptop and big tablet'
+     }
+}
+@media(min-width:1200px)
+{
+    /* bigger laptop and moniter*/
+    body{
+        background-color: violet;
+    }
+    div::after{
+        content:'bigger screen'
+    }
+}
+div{
+    text-align:center;
+    font-size:x-large;
+}

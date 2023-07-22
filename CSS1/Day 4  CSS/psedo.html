@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psedo</title>
+    <style>
+        /* .hello:hover{
+            background-color:aqua;
+            color:white;
+            border: 2px solid red;
+        }
+    input:focus{
+        font-size:25px;
+        color: brown;
+        background-color:rgba(255, 0, 174, 0.45);
+    }
+    a:hover{
+        color:aqua;
+    }
+    a:active {
+        color:rgba(255, 192, 203, 0.681);
+    }
+    a:visited{
+        color:red;
+    } */
+    /* nth-child can be odd even 2n+1 any number */
+    a:nth-child(even){
+        background-color:yellow;
+    }
+    /* in psedo element first-line first-latter (befor aftr so we should write content:="Pw Skills") */
+    .lorem::first-line{
+        color:purple;
+    }
+    .lorem::before{
+        content:"Pw sills";
+        color:royalblue;
+    }
+    ::selection{
+        background-color: yellow;
+        color:blue;
+    }
+    ::marker{
+        color:red;
+    }
+    </style>
+</head>
+<body>
+    <p class="hello">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi amet cumque nulla voluptate autem. Voluptas ducimus et expedita rem inventore iure, nostrum placeat esse voluptatum ipsa
+         debitis, non fugit vero.</p>
+        <input type="text" name="" id="" /><hr>
+        <nav>
+        <a href="https://www.google.com/">Google</a>
+        <a href="https://www.google.com/">Google</a>
+        <a href="https://www.google.com/">Google</a>
+        <a href="https://www.google.com/">Google</a>
+        </nav>
+        <p class="lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eligendi quos, corrupti quidem ipsam cumque error provident iste nostrum pariatur ipsum ratione placeat minima consequuntur! Ut excepturi commodi sequi nisi, asperiores illo a molestiae sit, officiis obcaecati reprehenderit possimus, natus quo. Tempora dicta eum eveniet sunt voluptates provident deleniti quo consequatur dignissimos officiis? Tenetur, sequi dignissimos qui reprehenderit illum nemo sint eum unde dolorem ut dolor necessitatibus delectus alias quos, natus, laudantium suscipit blanditiis omnis vitae! Beatae, exercitationem impedit quis praesentium labore corporis id dolore facere maiores dignissimos aut nihil, veritatis obcaecati provident eveniet vitae earum dicta aspernatur iure! Nesciunt.</p>
+     <ul>
+        <li>One</li>
+        <li>One</li>
+        <li>One</li>
+        <li>One</li>
+     </ul>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body{
+    background-color: red;
+}
+/* first */
+div{
+    text-align:center;
+    font-size:x-large;
+}
+div::after{
+    content:'Welcome to the demo';
+}
+/* second */
+/* @media (min-width:760px){
+    body{
+        background-color:blue ;
+    }
+    div::after{
+        content:'Woah we are responsive';
+    }
+
+}
+
+@media (min-width:1000px){
+    body{
+        background-color:aquamarine ;
+    }
+    div::after{
+        content:'Santosh kumar yadav';
+    }
+}
+@media(max-width:400px){
+    body{
+        background-color:violet;
+    }
+    div::after{
+        content:'very small';
+    }
+ } */
+@media(max-width:400px){
+    body{
+        background-color:purple;
+    }
+    div::after{
+        content:'Very small screen';
+    }
+}
+@media(min-width:400px) and (max-width:768px){
+    body{
+        background-color:yellow;
+    }
+    div::after{
+        content:'media screen';
+    }
+}
+@media(760<= width<= 1000px){
+    body{
+        background-color:yellowgreen;
+    }
+    div::after{
+        content:'media large screen';
+    }
+}
+
+

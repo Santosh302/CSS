@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    overflow:hidden;
+}
+body{
+    height:100vh;
+    width:100vw;
+    background-color: bisque;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+nav{
+    display:flex;
+    width:100%;
+    align-items:center;
+    justify-content:space-around;
+    
+    }
+nav .logo{
+    font-weight:700;
+    font-size:25px;
+}
+li{
+    list-style:none;
+    cursor:pointer;
+} 
+a{
+    text-decoration: none;
+} 
+button{
+    background-color:aqua;
+    color:white;
+    border:1px solid white;
+    cursor:pointer;
+    border-radius:5px;
+    padding:5px 10px;
+    font-weight: 700;
+    width:fit-content;
+
+}
+button:hover{
+    background-color:gray;
+    color:aqua;
+    border:1px solid black;
+}
+header{
+    padding:15px  0px;
+}
+nav ul{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    font-weight:500px;
+}
+nav ul li:hover{
+    text-decoration:underline;
+    font-weight: 900;
+}
+.search-field{
+    display:flex;
+    gap:20px;
+}
+input{
+    padding:4px 10px;
+    
+}
+.Hero_Section{
+    display:flex;
+    text-align:center;
+}
+.Left_Section{
+    width:60%;
+    padding:0 8;
+    margin-bottom:16px;
+    margin-left:5px;
+}
+.Left_Section h1{
+    font-weight:800px;
+    font-size:38px;
+}
+.Left_Section h1 span{
+     color:brown;
+    font-weight:900;
+    background-color:gray;
+    padding: 0 15px;
+
+}
+.Left_Section p{
+    font-weight:500px;
+    font-size:30px;
+}
+.Left_Section p span{
+    color:brown;
+    font-weight: 700;
+    font-size:25px;
+}
+.Right_Section{
+    
+ display:flex;
+ align-items:center;
+ flex-direction:column;
+ justify-content:center;
+ gap:30px;
+ width:40%;
+}
+.Right_Section_Btn{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+.Right_Section img{
+    height:250px;
+    width:250px;
+    border-radius: 50%;
+}
+footer{
+    font-weight:600;
+    display:flex; 
+    justify-content:space-around;
+    padding:20px 0px;
+}
+footer ul{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+footer ul i:hover{
+    color:blue;
+    cursor:pointer;
+}
