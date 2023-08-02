@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample form</title>
+</head>
+<body>
+  <form action="/signup" method="post">
+   <fieldset>
+     <legend>Collecting user detail</legend>
+     <label for="fullname">Enter your fullname</label>
+     <input type="text" id="fullname" name="fname" placeholder="name">
+     <br>
+     <label for="email">Enter your email</label>
+     <input type="email" id="email" name="email" placeholder="email">
+     <br>
+     <label for="password">Enter your password</label>
+     <input type="password" id="password" name="password" placeholder="password">
+     <br>
+     select gender <br>
+     <label for="male">Male</label>
+     <input type="radio" id="male" name="gender" value="male"><br>
+     <label for="female">Female</label>
+     <input type="radio" id="female" name="gender" value="female"><br>
+      Please inter your address: <br>
+      <textarea name="" id="" cols="30" rows="10"></textarea><br>
+      <input type="submit">
+    </fieldset> 
+  </form>  
+  <!-- form of using get method -->
+  <form action="/signup" method="get">
+    <fieldset>
+      <legend>Collecting user detail</legend>
+      <label for="fullname">Enter your fullname</label>
+      <input type="text" id="fullname" name="fname" value="john" readonly>
+      <br>
+      <label for="email">Enter your email</label>
+      <input type="email" id="email" name="email" value="abc@gmail.com" disabled>
+      <br>
+      <label for="password">Enter your password</label>
+      <input type="password" id="password" name="password" size="40" autofocus>
+      <br>
+      select gender <br>
+      <label for="Male">Male</label>
+      <input type="radio" id="Male" name="gender" value="male"><br>
+      <label for="Female">Female</label>
+      <input type="radio" id="Female" name="gender" value="female"><br>
+       Please inter your address: <br>
+       <textarea name="" id="" cols="30" rows="10"></textarea><br>
+       <input type="number" min="0" max="5">
+       <input type="submit">
+     </fieldset> 
+   </form>  
+</body>
+</html>
