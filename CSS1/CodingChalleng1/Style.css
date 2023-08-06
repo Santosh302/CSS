@@ -1,0 +1,17 @@
+body{
+    background-image:url(img1.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+
+}
+h1{
+    text-align:center;
+    color:blue;
+    
+}
+div{
+    background-image: url(img2.jpg);
+    background-repeat:no-repeat;
+    background-position:top right;
+    height:200px;
+}
