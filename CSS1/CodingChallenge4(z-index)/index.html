@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index</title>
+    <style>
+        .parent{
+            height:100px;
+            width:100px;
+            background-color:blue;
+            margin-left:300px;
+            position: absolute;
+            margin-top:250px;
+            
+        }
+      .first{
+        background-color: red;
+        position:relative;
+        height:100px;
+        width:100px;
+        bottom:45px;
+        left:60px;
+        z-index: -1;
+        }
+       .second{
+        height:100px;
+        width:100px;
+        background-color:blueviolet;
+        position: relative;
+        bottom:200px;
+        left:100px;
+        z-index: -2;
+        }
+        .third{
+        height:100px;
+        width:100px;
+        background-color:pink;
+        position: relative;
+        bottom:345px;
+        left:160px;
+        }
+        .four{
+        height:100px;
+        width:100px;
+        background-color:blueviolet;
+        position: relative;
+        bottom:350px;
+        right:60px;
+        z-index: -1;
+        }
+        .five{
+        height:100px;
+        width:100px;
+        background-color:aqua;
+        position: relative;
+        bottom:500px;
+        right:100px;
+        z-index: -2;
+        }
+        .six{
+        height:100px;
+        width:100px;
+        background-color:green;
+        position: relative;
+        bottom:650px;
+        right:159px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="four"></div>
+    <div class="five"></div>
+    <div class="six"></div>
+    </div>
+</body>
+</html>
