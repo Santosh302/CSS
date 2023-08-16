@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .parentDiv{
+            background-color:aqua;
+            width:500px;
+            height:300px;
+            border:solid 5px black;
+            position:static;
+            margin:100px;
+            text-align:center
+        }
+        .parentDiv1{
+            background-color: rgb(255,0,4);
+            width:500px;
+            height:300px;
+            border:solid 5px black;
+            position:relative;
+            margin-left:100px;
+            text-align:center;
+        }
+        .child1{
+            background-color:chocolate;
+            width:100px;
+            height:100px;
+            border-style: solid;
+            position:fixed;
+            top:0;
+            right:0;
+        }
+        .child2{
+            background-color: rgb(89,220,28);
+            width:100px;
+            height:100px;
+            border-style:solid;
+            position:absolute;
+            top:0px;
+            left:0px;
+        }
+        .child3{
+            background-color:rgb(220,28,204);
+            width:100px;
+            height:100px;
+            border-style:solid;
+            position:static;
+            top:400px;
+            left:400px;
+        }
+        .child4{
+            background-color: rgb(90,21,174);
+            width:100px;
+            height:100px;
+            border-style:solid;
+            position:absolute;
+            top:0px;
+            left:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parentDiv">
+        <div class="child1">Fixed</div>
+        <div class="child2">Absolute div in static div</div>
+        <div class="child3">Static</div>
+        </div>
+        <div class="parentDiv1">
+            <div class="child4">Absolute div in relative div</div>
+        </div>
+</body>
+</html>
