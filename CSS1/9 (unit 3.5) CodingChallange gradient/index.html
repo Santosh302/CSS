@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Gradients :</title>
+        <style>
+            body{
+                background-color:#b8cced;
+            }
+            .container div
+            {
+              width:200px;
+              height:150px;
+              display:inline-block;
+              margin:2px;
+            }
+            .linear{
+                background-image:linear-gradient(to bottom, rgb(255, 68, 0), #ffffff);,
+            }
+            .radial{
+                background-image:radial-gradient(#830960a3, #ffffff);
+            }
+            .linear1{
+                background-image:linear-gradient(to left, #830960a3, #ffffff);}
+                .radial1{
+                    background-image: radial-gradient(ellipse,red,green,blue);
+                }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+               <div class="linear"></div>
+               <div class="radial"></div>
+               <div class="linear1"></div>
+               <div class="radial1"></div>
+        </div>
+    </body>
+</html>
