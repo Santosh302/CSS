@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        :root{
+            --divWidth:300;
+            --divHeight:100px;
+            --divBorderRadius:10px;
+            --divPosition:absolute;
+            --divLeft:0;
+            --divRight:0;
+            --divMarginLeft:auto;
+            --divMarginRight:auto;
+        }
+        div{
+            animation-name:my-animation;
+            animation-duration:2s;
+            animation-direction:alternate;
+            animation-timing-function:linear;
+
+            width:var(--divWidth);
+            height:var(--divHeight);
+            border-radius:var(--divBorderRadius);
+            position:var(--divPosition);
+            left:var(--divLeft);
+            right:var(--divRight);
+            margin-left:var(--divMarginLeft);
+            margin-right:var(--divMarginRight);
+        }
+        @keyframes my-animation{
+            from{
+                background-color: #ff7a59;
+                width:300px;
+                top:10px;
+            }
+            to {
+                background-color:#33475b;
+                width:50px;
+                top:100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+</html>
