@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .nav {
+            width: 90%;
+            height: 60px;
+            background-color: rgb(15, 16, 28);
+            margin: auto;
+            display: flex;
+            margin-top: 10px;
+            background: rgba(17, 219, 207, 0.8);
+        }
+
+        @media only screen and (min-width :375px) and (max-width:786px) {
+            .nav {
+                width: 90%;
+
+
+            }
+        }
+
+        .left {
+            width: 60%;
+            height: 50%;
+            font-size: 30px;
+            margin-left: 30px;
+            color: white;
+            padding: 14px;
+        }
+
+        .right {
+            color: white;
+            width: 30%;
+            display: flex;
+            margin-left: 30px;
+            justify-content: space-evenly;
+            padding: 20px;
+            font-size: 20px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        /* .container {
+            width: 100%;
+
+        } */
+
+        /* .container>div {
+
+            width: 40%;
+            margin: auto;
+            padding: 50px;
+            font-size: 20px;
+            font-family: Arial;
+            margin-top: 10px;
+            ;
+            background-color: aliceblue;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        } */
+
+        input {
+            height: 25px;
+            width: 90%;
+
+        }
+
+        #btn {
+            width: 100%;
+            /* height: 30px; */
+            margin-top: 20px;
+            background-color: #29c7bd;
+            border: 1px solid black;
+            border-radius: 5px;
+            color: white;
+
+
+
+        }
+
+        .user_form_controller {
+            /* border: 1px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #29c7bd;">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Medical</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02 navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#medical">Medical Camps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Team</a></li> -->
+                    <li class="nav-item"><a class="nav-link" id="HospitalManager" href="hospital.html"></a></li>
+                    <li class="nav-item"><a class="nav-link" id="HospitalDriver" href="contact.html"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="user_form_controller m-4 p-3">
+
+            <label>E-Mail</label>
+            <br>
+            <input id="email" type="email" placeholder="Enter E-mail.." class="form-control" />
+            <br>
+            <label>Password</label>
+            <br>
+            <input id="password" type="password" placeholder="Enter Password.." class="form-control" />
+            <br><br>
+            <button id="btn" class="p-2">Login</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    let HospitalManager = document.querySelector('#HospitalManager');
+    let HospitalDriver = document.querySelector('#HospitalDriver');
+
+    var regUser = JSON.parse(localStorage.getItem("Signupdata")) || [];
+
+    if (regUser[0]?.role === "hospital_manager") {
+        HospitalDriver.innerHTML = 'Driver Contact';
+    }
+    if (regUser[0]?.role === "ambulance_driver") {
+        HospitalManager.innerHTML = 'Hopital Contact';
+    }
+
+    document.querySelector("#btn").addEventListener("click", logIn);
+
+    
+    function logIn() {
+
+        var email = document.querySelector("#email").value;
+        var password = document.querySelector("#password").value;
+
+        if (checkAuth(email, password)) {
+            alert("Login Successful!")
+            window.location.href = "../index.html";
+        } else {
+            alert("invalid Credentials")
+        }
+
+    }
+
+    function checkAuth(email, pass) {
+            if (regUser.emailAdd == email && regUser.pass == pass) {
+                return true
+            }
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .nav {
+            width: 90%;
+            height: 60px;
+            background-color: rgb(15, 16, 28);
+            margin: auto;
+            display: flex;
+            margin-top: 10px;
+        }
+
+
+
+        .left {
+            width: 60%;
+            height: 50%;
+            font-size: 30px;
+            margin-left: 30px;
+            color: white;
+            padding: 14px;
+        }
+
+        .right {
+            color: white;
+            width: 30%;
+            display: flex;
+            margin-left: 30px;
+            justify-content: space-evenly;
+            padding: 20px;
+            font-size: 20px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        input {
+            height: 25px;
+            width: 90%;
+
+        }
+
+        #btn {
+            width: 100%;
+            /* height: 30px; */
+            margin-top: 20px;
+            background-color: #29c7bd;
+            border: 1px solid black;
+            border-radius: 5px;
+            color: white;
+
+
+
+        }
+
+        .user_form_controller {
+            /* border: 1px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        }
+
+        #call_btn {
+
+            background-color: #29c7bd;
+            border: 1px solid black;
+            border-radius: 2px;
+
+            color: white;
+        }
+
+        .contact_top_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact_main_page {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+
+        }
+
+
+        #consultations {
+            max-height: 600px;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+
+        }
+
+        #consultations > li {
+            margin-top: 10px;
+            border: 1px solid gray !important;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+                #driverconsultations {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+        }
+
+        #driverconsultations>li {
+            margin-top: 10px;
+            border: 1px solid gray !important;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+
+
+
+
+
+        @media only screen and (min-width :0px) and (max-width:786px) {
+            .nav {
+                width: 90%;
+
+
+            }
+
+            .contact_main_page {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #29c7bd;">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Medical</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02 navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#medical">Medical Camps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Team</a></li> -->
+                    <li class="nav-item"><a class="nav-link" id="HospitalManager" href="hospital.html"></a></li>
+                    <li class="nav-item"><a class="nav-link" id="HospitalDriver" href="contact.html"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container ">
+        <div class="m-4 p-3 contact_top_header">
+            <span>ECS</span>
+            <button id="call_btn" class="p-2">Emergency call</button>
+        </div>
+    </div>
+   
+    <!-- End Hero -->
+    <div class="container mt-4 p-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center my-4">
+                    Connect to Driver
+                </h2>
+                <form>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4">
+                            Name
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="drivername" class="form-control" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4">
+                            Contact
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="tel" id="contact" class="form-control" placeholder="123" required>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4">
+                            Email
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="tel" id="email" class="form-control" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4">
+                            Date
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="date" id="date" class="form-control">
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4">
+                            Time
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="time" id="time" class="form-control">
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4">
+                            Queries
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <textarea id="queries" class="form-control" required></textarea>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4">
+                            Location
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <textarea id="driverlocation" class="form-control" required></textarea>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row justify-content-end">
+                        <div class="col-sm-5">
+                            <button type="submit" class="btn btn-form" id="driver-btn">
+                                Confirm
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2 id="services" class="text-center my-4">Your contacts</h2>
+                <ul id="consultations" class="list-group consultant_list_main"></ul>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container mt-4 p-4">
+        <div class="row">
+        <div class="col-md-12">
+            <h2 id="" class="text-center my-4">All Requests</h2>
+            <ul id="driverconsultations" class="list-group consultant_list_main"></ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="driver.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script>
+    let HospitalManager = document.querySelector('#HospitalManager');
+    let HospitalDriver = document.querySelector('#HospitalDriver');
+
+    var regUser = JSON.parse(localStorage.getItem("Signupdata")) || {};
+
+    if (regUser?.role === "hospital_manager") {
+        HospitalDriver.innerHTML = 'Driver Contact';
+    }
+    if (regUser?.role === "ambulance_driver") {
+        HospitalManager.innerHTML = 'Hopital Contact';
+    }
+</script>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../style.css">
+    <style>
+        .nav {
+            width: 90%;
+            height: 60px;
+            background-color: rgb(15, 16, 28);
+            margin: auto;
+            display: flex;
+            margin-top: 10px;
+        }
+
+        @media only screen and (min-width :375px) and (max-width:786px) {
+            .nav {
+                width: 90%;
+
+
+            }
+        }
+
+        .left {
+            width: 60%;
+            height: 50%;
+            font-size: 30px;
+            margin-left: 30px;
+            color: white;
+            padding: 14px;
+        }
+
+        .right {
+            color: white;
+            width: 30%;
+            display: flex;
+            margin-left: 30px;
+            justify-content: space-evenly;
+            padding: 20px;
+            font-size: 20px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        input {
+            height: 25px;
+            width: 90%;
+
+        }
+
+        #btn {
+            width: 100%;
+            /* height: 30px; */
+            margin-top: 20px;
+            background-color: #29c7bd;
+            border: 1px solid black;
+            border-radius: 5px;
+            color: white;
+            
+
+
+        }
+
+        .user_form_controller {
+            /* border: 1px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #29c7bd;">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Medical</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02 navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#medical">Medical Camps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Team</a></li> -->
+                    <li class="nav-item"><a class="nav-link" id="HospitalManager" href="hospital.html"></a></li>
+                    <li class="nav-item"><a class="nav-link" id="HospitalDriver" href="contact.html"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="user_form_controller m-4 p-3">
+            <label>Enter Name</label>
+            <br>
+            <input id="name" type="text" placeholder="Enter Name.." class="form-control" />
+            <br> 
+            <label>Contact Number</label>
+            <br>
+            <input id="mobile" type="number" placeholder="Enter Number.." class="form-control" />
+            <br>
+            <label>Role</label>
+            <br>
+            <select id="role" type="select" placeholder="Choose role.." class="form-control" > 
+                <option value="">Choose...</option>
+                <option value="hospital_manager">Hospital manager</option>
+                <option value="ambulance_driver">Ambulance driver</option>
+            </select>
+            <br>
+            <label>E-Mail</label>
+            <br>
+            <input id="email" type="email" placeholder="Enter E-mail.."  class="form-control"/>
+            <br>
+            <label>Password</label>
+            <br>
+            <input id="password" type="password" placeholder="Enter Password.." class="form-control" />
+            <br><br>
+            <button id="btn" class="p-2">Sign Up</button>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("#btn").addEventListener("click", signUp);
+
+    let HospitalManager = document.querySelector('#HospitalManager');
+    let HospitalDriver = document.querySelector('#HospitalDriver');
+
+    var regUser = JSON.parse(localStorage.getItem("Signupdata")) || {};
+
+    if (regUser[0]?.role === "hospital_manager") {
+        HospitalDriver.innerHTML = 'Driver Contact';
+    }
+    if (regUser[0]?.role === "ambulance_driver") {
+        HospitalManager.innerHTML = 'Hopital Contact';
+    }
+
+    var res = []
+   
+    function signUp() {
+        //elem.preventDefault()
+        var name = document.querySelector("#name").value;
+        var mobile = document.querySelector("#mobile").value;
+        var email = document.querySelector("#email").value;
+        var password = document.querySelector("#password").value;
+        var role = document.querySelector("#role").value;
+        console.log(role)
+        res.push(1);
+        if (name.length == "") {
+            alert("Please enter Name")
+            return ;
+        }
+        if (mobile.length == "") {
+            alert("Please enter Mobile no.")
+            return ;
+        }
+        if (role.length == "") {
+            alert("Please select a role.")
+            return ;
+        }
+        if (email.length == "") {
+            alert("Please enter Email")
+            return ;
+        }
+        if (password.length == "") {
+            alert("Please enter Password")
+            return ;
+
+        }
+        var userCred = {
+            name: name,
+            emailAdd: email,
+            pass: password,
+            mobile: mobile,
+            role: role
+        };
+        // regUser.push(userCred);
+        // alert("Register Successfully!")
+        localStorage.setItem("Signupdata", JSON.stringify(userCred));
+        window.location.href = "Login.html";
+    }
+
+</script>
